@@ -1,0 +1,123 @@
+.user-list-container {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.user-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.user-list h1 {
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th,
+.user-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.user-list th {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.user-list td {
+    color: var(--text-main);
+}
+
+.role-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.role-badge.admin {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+.role-badge.user {
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ecdc4;
+}
+
+.user-list tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--primary);
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-info {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.user-list table {
+    min-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .user-list {
+        padding: 20px;
+    }
+
+    .user-list h1 {
+        font-size: 1.8rem;
+    }
+
+    .user-list th,
+    .user-list td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pagination-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
