@@ -1,100 +1,73 @@
-# Cannabis Product Discovery Platform 🌿
+This project started with a simple idea: finding the right cannabis product shouldn’t feel overwhelming.
+There are so many strains, effects, and potency levels out there. Instead of endless scrolling and confusing lists, I wanted to build something clean, intuitive, and genuinely helpful  a platform that makes product discovery simple and enjoyable.
+That’s how this Cannabis Product Discovery Platform was created.
 
-Welcome! This is a passion project designed to make discovering cannabis products easier, more transparent, and engaging. We built this platform to connect users with the right products through detailed information, smart filtering, and a beautiful, modern interface.
+The Project Does:
+Browse  curated collection of products
+Filter products by  categories, or THC ranges
+View detailed product information
+Save favorites to a personal wishlist
+Enjoy a smooth, responsive experience on both desktop and mobile
 
-Whether you're exploring different strains for their effects or looking for specific CBD/THC ratios, this app helps you find your perfect match.
+Also for Admin Side:
+Admin is responsible for adding products
+Admin is also responsible for adding categories
+Admin can view users loggedin
 
-## What is this?
+Both admin and users use the same login page.
 
-Think of it as your digital guide to cannabis. Instead of overwhelming lists, we provide a clean, glassmorphism-styled interface where you can:
-- **Explore** a curated catalog of products.
-- **Filter** by exactly what matters to you (like "Relaxing" effects or specific THC levels).
-- **Save** your favorites to a wishlist for later.
-- **Manage** everything easily if you're an admin.
+The admin account is manually added to the database, so there is no signup option for admin. Once logged in, the admin has access to a separate dashboard that is not visible to normal users,normal users have another dashboard.
 
-## Key Features
+Tech Stack
+This project was built using the MERN Stack, which provides a full JavaScript ecosystem from frontend to backend.
+Frontend: React.js
+Backend: Node.js & Express
+Database: MongoDB
+Authentication: JSON Web Tokens (JWT)
+Styling: Custom CSS with a glassmorphism-inspired design
 
-✨ **For Users:**
-- **Smart Discovery**: Don't just scroll—filter. Find products by category, potency range, or effect.
-- **Visual Details**: Get the full picture with detailed breakdowns of THC/CBD percentages and pricing.
-- **Personal Wishlist**: A dedicated space to keep track of products you love or want to try.
-- **Smooth Experience**: A responsive design that looks great on your phone or laptop.
-
-🛡️ **For Admins:**
-- **Dashboard Hub**: Get a bird's-eye view of your platform's activity, user counts, and product stats.
-- **Total Control**: Easily add, edit, or remove products and categories without touching a line of code.
-- **User Management**: Keep track of who is joining your community.
-
-## Under The Hood (Tech Stack)
-
-We used the **MERN Stack** to build this because it offers a flexible, full-stack JavaScript environment that's perfect for modern web apps.
-
-*   **Frontend**: React.js for a snappy UI, styled with custom CSS (no heavy frame-works, just pure creativity!).
-*   **Backend**: Node.js & Express to handle all the logic and API requests.
-*   **Database**: MongoDB for storing all our flexible data structures.
-*   **Security**: JSON Web Tokens (JWT) to keep user sessions safe and secure.
-
-## Project Structure
-
-Here's a quick look at how we organized the code, so you don't get lost:
-
-```
 Cannabis Product Discovery Platform/
-├── client/                 # Where the React magic happens
+├── client/
 │   ├── src/
-│   │   ├── components/     # Building blocks like Navbar, Modals
-│   │   ├── context/        # Handling user login state
-│   │   ├── pages/          # The main views (Discovery, Login, etc.)
-│   │   └── App.jsx         # The main entry point
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── App.jsx
 │
-├── server/                 # The brain of the operation
-│   ├── db/                 # Database connections & models
-│   ├── middleware/         # Safety checks (Auth tokens)
-│   ├── routes/             # API endpoints (Where the frontend talks to the backend)
-│   └── server.js           # Server startup file
-```
+├── server/
+│   ├── db/
+│   ├── middleware/
+│   ├── routes/
+│   └── server.js
 
-## How to Run It Locally
+client/ handles the React frontend
+server/ manages the backend API and database logic
 
-Want to take it for a spin? Follow these steps:
-
-**1. Clone the repo**
-```bash
+Clone the Repository
 git clone https://github.com/yourusername/cannabis-product-discovery.git
 cd Cannabis Product Discovery Platform
-```
 
-**2. Get the Backend Running**
-Head into the server folder and install the dependencies:
-```bash
+Start the Backend
 cd server
 npm install
 npm run dev
-```
-*Your server should now be humming on `http://localhost:8001`*
 
-**3. Fire up the Frontend**
-Open a new terminal, go to the client folder, and start the UI:
-```bash
-cd ../client
+Start the Frontend
+cd client
 npm install
 npm run dev
-```
-*Visit `http://localhost:5173` in your browser to see it in action!*
 
-## Environment Config
-
-You'll need a `.env` file in your `server` folder to keep secrets safe. It should look something like this:
-
-```env
+Environment Variables
 PORT=8001
 MONGODB_URI=your_mongodb_connection_string
 ACCESS_TOKEN=your_super_secret_key
-```
+REFRESH_TOKEN=your_super_secret_key
 
-## License
+License
+This project is open-source under the MIT License.
+Feel free to explore it, modify it, and build on top of it.
 
-This project is open-source and available under the MIT License. Feel free to use it, break it, and fix it!
+Final Note
+This project was built as a learning experience and a passion project. It helped strengthen my understanding of full-stack development, authentication, role-based access control, and responsive UI design.
 
----
-*Built with 💚 and code.*
+If you’re checking this out — thank you for taking the time.
