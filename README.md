@@ -44,7 +44,8 @@ client/ handles the React frontend
 server/ manages the backend API and database logic
 
 Clone the Repository
-git clone https://github.com/yourusername/cannabis-product-discovery.git
+git clone https://github.com/Nikhitha-138/Discovery-Platform-1
+
 cd Cannabis Product Discovery Platform
 
 Start the Backend
