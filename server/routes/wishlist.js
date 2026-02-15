@@ -5,7 +5,7 @@ const Product = require('../db/models/product');
 const UserToken = require('../middleware/user-auth');
 
 
-// Toggle wishlist (Add if not exists, Remove if exists)
+
 router.post('/user/wishlist', UserToken, async (req, res) => {
     try {
         const { productId } = req.body;
@@ -19,7 +19,7 @@ router.post('/user/wishlist', UserToken, async (req, res) => {
         const existingItem = await WishList.findOne({ userId, productId });
 
         if (existingItem) {
-            // Remove if exists
+
             await WishList.findByIdAndDelete(existingItem._id);
             return res.status(200).json({
                 statusCode: 200,
@@ -27,7 +27,7 @@ router.post('/user/wishlist', UserToken, async (req, res) => {
                 removed: true
             });
         } else {
-            // Add if doesn't exist
+
             const wishlistItem = await WishList.create({ userId, productId });
             return res.status(201).json({
                 statusCode: 201,

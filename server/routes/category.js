@@ -51,7 +51,7 @@ router.get('/categories', AdminToken, async (req, res) => {
   }
 });
 
-// User-accessible categories for filtering
+
 router.get('/user/categories', UserToken, async (req, res) => {
   try {
     const categories = await Category.find();

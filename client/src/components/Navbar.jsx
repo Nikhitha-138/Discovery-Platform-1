@@ -82,6 +82,7 @@ const Navbar = () => {
         )}
         {user && user.role && user.role.toLowerCase() === 'user' && (
           <>
+            <h4 style={{ color: 'var(--primary-light)' }}>Welcome {user.name}!!</h4>
             <Link to="/discovery" className="nav-item" onClick={closeMenu}>
               Discovery
             </Link>

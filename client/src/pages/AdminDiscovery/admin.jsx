@@ -193,6 +193,4 @@ const AdminDiscovery = () => {
   );
 };
 
-export default AdminDiscovery;
-
-
+export default AdminDiscovery
